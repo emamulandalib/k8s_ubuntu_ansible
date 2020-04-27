@@ -32,7 +32,7 @@
       update_cache: yes
     vars:
       packages:
-      - docker-ce=18.06.2~ce~3-0~ubuntu
+      - docker-ce
       - containerd.io
     notify:
       - docker status
@@ -73,9 +73,9 @@
       update_cache: yes
     vars:
       packages:
-        - kubelet=1.14.0-00
-        - kubeadm=1.14.0-00
-        - kubectl=1.14.0-00
+        - kubelet=1.18.0-00
+        - kubeadm=1.18.0-00
+        - kubectl=1.18.0-00
 
   - name: Get IP eth1 addr
     shell: ifconfig eth1 | grep 'inet' | cut -d{{':'}} -f2 | awk '{ print $2 }'
