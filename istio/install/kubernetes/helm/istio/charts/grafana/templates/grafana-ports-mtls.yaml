@@ -1,17 +1,3 @@
-{{ define "grafana-default.yaml.tpl" }}
-apiVersion: authentication.istio.io/v1alpha1
-kind: Policy
-metadata:
-  name: grafana-ports-mtls-disabled
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: {{ template "grafana.name" . }}
-    chart: {{ template "grafana.chart" . }}
-    heritage: {{ .Release.Service }}
-    release: {{ .Release.Name }}
-spec:
-  targets:
-  - name: grafana
-    ports:
-    - number: {{ .Values.service.externalPort }}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa8fbfd9c03ed1e2c33cbcb8003ef2026476ab249fcce4fabf5962a5fe0fd85d
+size 453

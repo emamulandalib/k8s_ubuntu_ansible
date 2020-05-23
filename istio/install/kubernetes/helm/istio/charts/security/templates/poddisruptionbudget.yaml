@@ -1,20 +1,3 @@
-{{- if .Values.global.defaultPodDisruptionBudget.enabled }}
-apiVersion: policy/v1beta1
-kind: PodDisruptionBudget
-metadata:
-  name: istio-citadel
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: {{ template "security.name" . }}
-    chart: {{ template "security.chart" . }}
-    heritage: {{ .Release.Service }}
-    release: {{ .Release.Name }}
-    istio: citadel
-spec:
-{{ include "podDisruptionBudget.spec" .Values.global.defaultPodDisruptionBudget }}
-  selector:
-    matchLabels:
-      app: {{ template "security.name" . }}
-      release: {{ .Release.Name }}
-      istio: citadel
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b28724179a632ee82f849ddf8c8e88b9b309aac6f50d5d2a3177c101ad47136
+size 598

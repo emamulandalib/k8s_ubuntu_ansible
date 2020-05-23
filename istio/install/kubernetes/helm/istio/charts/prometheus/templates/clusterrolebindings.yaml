@@ -1,17 +1,3 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: prometheus-{{ .Release.Namespace }}
-  labels:
-    app: prometheus
-    chart: {{ template "prometheus.chart" . }}
-    heritage: {{ .Release.Service }}
-    release: {{ .Release.Name }}
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: prometheus-{{ .Release.Namespace }}
-subjects:
-- kind: ServiceAccount
-  name: prometheus
-  namespace: {{ .Release.Namespace }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4262e69d3ac9f274f3e265b838df148f7aa3a0cb32307e5cf8cf2a54bb974ea
+size 468

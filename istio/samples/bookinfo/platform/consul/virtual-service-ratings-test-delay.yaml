@@ -1,25 +1,3 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: ratings
-spec:
-  hosts:
-  - ratings.service.consul
-  http:
-  - match:
-    - headers:
-        end-user:
-          exact: jason
-    fault:
-      delay:
-        percentage:
-          value: 100.0
-        fixedDelay: 7s
-    route:
-    - destination:
-        host: ratings.service.consul
-        subset: v1
-  - route:
-    - destination:
-        host: ratings.service.consul
-        subset: v1
+version https://git-lfs.github.com/spec/v1
+oid sha256:28bfe5fc038bc15429c976ff26b8f0d9044d6be0740d5e1580b6154e98e91363
+size 467

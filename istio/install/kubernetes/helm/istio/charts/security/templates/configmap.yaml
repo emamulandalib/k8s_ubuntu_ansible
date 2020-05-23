@@ -1,20 +1,3 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: istio-security-custom-resources
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: {{ template "security.name" . }}
-    chart: {{ template "security.chart" . }}
-    heritage: {{ .Release.Service }}
-    release: {{ .Release.Name }}
-    istio: citadel
-data:
-  custom-resources.yaml: |-
-    {{- if .Values.global.mtls.enabled }}
-      {{- include "security-default.yaml.tpl" . | indent 4}}
-    {{- else }}
-      {{- include "security-permissive.yaml.tpl" . | indent 4}}
-    {{- end }}
-  run.sh: |-
-    {{- include "install-custom-resources.sh.tpl" . | indent 4}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:05be1a7978ae945b8cda1e08b79f52cbdce61f38c9956f6f60c8e304452257f0
+size 615

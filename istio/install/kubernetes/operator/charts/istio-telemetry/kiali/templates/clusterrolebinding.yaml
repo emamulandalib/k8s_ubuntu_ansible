@@ -1,33 +1,3 @@
-{{- if not .Values.kiali.dashboard.viewOnlyMode }}
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: kiali
-  labels:
-    app: kiali
-    release: {{ .Release.Name }}
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: kiali
-subjects:
-  - kind: ServiceAccount
-    name: kiali-service-account
-    namespace: {{ .Release.Namespace }}
-{{- else }}
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: istio-kiali-viewer-role-binding-{{ .Release.Namespace }}
-  labels:
-    app: kiali
-    release: {{ .Release.Name }}
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: kiali-viewer
-subjects:
-- kind: ServiceAccount
-  name: kiali-service-account
-  namespace: {{ .Release.Namespace }}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c6c186f5e7edd1170a4b6c5cb3c37004115877515d4e4f8e80fa391a4a09c47c
+size 798

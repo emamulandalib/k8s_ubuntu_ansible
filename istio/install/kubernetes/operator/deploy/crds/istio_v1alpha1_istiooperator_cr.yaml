@@ -1,9 +1,3 @@
----
-apiVersion: install.istio.io/v1alpha1
-kind: IstioOperator
-metadata:
-  namespace: istio-system
-  name: example-istiocontrolplane
-spec:
-  profile: demo
-...
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1a35ddf2bdc7c4ac02834692ad5ba98bfee9c93fc0eab5d5cb4f7d7d75942ed
+size 158

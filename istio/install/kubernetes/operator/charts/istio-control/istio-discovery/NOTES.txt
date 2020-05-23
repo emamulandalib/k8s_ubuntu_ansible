@@ -1,5 +1,3 @@
-Minimal control plane for Istio. Pilot and mesh config are included.
-
-MCP and injector should optionally be installed in the same namespace. Alternatively remote
-address of an MCP server can be set.
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:1eaa1a539ad686eea461a5045c4c99698b6519c3c9516e0f0cd0f6f60aed89e9
+size 200

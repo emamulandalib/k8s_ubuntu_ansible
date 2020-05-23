@@ -1,22 +1,3 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: istio-galley
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: {{ template "galley.name" . }}
-    chart: {{ template "galley.chart" . }}
-    heritage: {{ .Release.Service }}
-    release: {{ .Release.Name }}
-    istio: galley
-spec:
-  ports:
-  - port: 443
-    targetPort: 9443
-    name: https-validation
-  - port: {{ .Values.global.monitoringPort }}
-    name: http-monitoring
-  - port: 9901
-    name: grpc-mcp
-  selector:
-    istio: galley
+version https://git-lfs.github.com/spec/v1
+oid sha256:08c1e49b1abaa16cec1e1e68f6682ff7538726bac36a9fe7aa487478f39af143
+size 492

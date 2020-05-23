@@ -1,14 +1,3 @@
----
-kind: ClusterRoleBinding
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  name: istio-operator
-subjects:
-- kind: ServiceAccount
-  name: istio-operator
-  namespace: istio-operator
-roleRef:
-  kind: ClusterRole
-  name: istio-operator
-  apiGroup: rbac.authorization.k8s.io
-...
+version https://git-lfs.github.com/spec/v1
+oid sha256:623161da573a95f3be1d6da4e59fa69cbd0e7ce17e33c3b9df42c3bbfecf3ed2
+size 281

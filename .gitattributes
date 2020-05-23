@@ -1,2 +1,4 @@
 istio/ filter=lfs diff=lfs merge=lfs -text
 linkerd/ filter=lfs diff=lfs merge=lfs -text
+istio/** filter=lfs diff=lfs merge=lfs -text
+linkerd/** filter=lfs diff=lfs merge=lfs -text

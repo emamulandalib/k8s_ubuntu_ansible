@@ -1,17 +1,3 @@
-{{- if .Values.grafana.persist }}
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: istio-grafana-pvc
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: grafana
-    release: {{ .Release.Name }}
-spec:
-  storageClassName: {{ .Values.grafana.storageClassName }}
-  accessModes:
-    - {{ .Values.grafana.accessMode }}
-  resources:
-    requests:
-      storage: 5Gi
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:513a2dcd4ba61408167f13af5e90939b0e8312dce1b5007076c78debd235ca06
+size 387

@@ -1,21 +1,3 @@
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRole
-metadata:
-  name: productpage-viewer
-  namespace: default
-spec:
-  rules:
-  - services: ["productpage.default.svc.cluster.local"]
-    methods: ["GET"]
----
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRoleBinding
-metadata:
-  name: bind-productpage-viewer
-  namespace: default
-spec:
-  subjects:
-  - user: "*"
-  roleRef:
-    kind: ServiceRole
-    name: "productpage-viewer"
+version https://git-lfs.github.com/spec/v1
+oid sha256:fac6caff4cf4ea3776dd579d622ce5a998b9ff486fdd84ca72491e3a9050851f
+size 430

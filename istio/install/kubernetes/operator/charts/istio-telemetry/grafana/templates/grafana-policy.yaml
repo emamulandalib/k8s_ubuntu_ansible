@@ -1,13 +1,3 @@
-apiVersion: authentication.istio.io/v1alpha1
-kind: Policy
-metadata:
-  name: grafana-ports-mtls-disabled
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: grafana
-    release: {{ .Release.Name }}
-spec:
-  targets:
-  - name: grafana
-    ports:
-    - number: {{ .Values.grafana.service.externalPort }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:75ce659ec3a0de8506bd53f824a4eef12526a5702cfe55f0541af79036e3322a
+size 305

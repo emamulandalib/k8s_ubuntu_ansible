@@ -1,17 +1,3 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: istio-citadel-{{ .Release.Namespace }}
-  labels:
-    app: {{ template "security.name" . }}
-    chart: {{ template "security.chart" . }}
-    heritage: {{ .Release.Service }}
-    release: {{ .Release.Name }}
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: istio-citadel-{{ .Release.Namespace }}
-subjects:
-  - kind: ServiceAccount
-    name: istio-citadel-service-account
-    namespace: {{ .Release.Namespace }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f44b88521ad21f0475602d998057da7b7fa901b7721c06bb7332413ad0210616
+size 519

@@ -1,31 +1,3 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: istio-cni
-  labels:
-    app: istio-cni
-    release: {{ .Release.Name }}
-rules:
-- apiGroups: [""]
-  resources:
-  - pods
-  - nodes
-  verbs:
-  - get
----
-{{- if .Values.cni.repair.enabled }}
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: istio-cni-repair-role
-  labels:
-    app: istio-cni
-    release: {{ .Release.Name }}
-rules:
-- apiGroups: [""]
-  resources: ["pods"]
-  verbs: ["get", "list", "watch", "delete", "patch", "update" ]
-- apiGroups: [""]
-  resources: ["events"]
-  verbs: ["get", "list", "watch", "delete", "patch", "update", "create" ]
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a28b868cca1bb3a08d339924bb667e8ccf4fa779c6c6704db44dece9f4a71c30
+size 662

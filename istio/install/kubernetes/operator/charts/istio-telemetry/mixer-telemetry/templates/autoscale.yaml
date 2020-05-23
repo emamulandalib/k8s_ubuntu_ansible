@@ -1,24 +1,3 @@
-{{ $telemetry := index .Values "mixer" "telemetry" }}
-{{- if and $telemetry.autoscaleEnabled $telemetry.autoscaleMin $telemetry.autoscaleMax }}
-apiVersion: autoscaling/v2beta1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: istio-telemetry
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: mixer
-    release: {{ .Release.Name }}
-spec:
-    maxReplicas: {{ $telemetry.autoscaleMax }}
-    minReplicas: {{ $telemetry.autoscaleMin }}
-    scaleTargetRef:
-      apiVersion: apps/v1
-      kind: Deployment
-      name: istio-telemetry
-    metrics:
-    - type: Resource
-      resource:
-        name: cpu
-        targetAverageUtilization: {{ $telemetry.cpu.targetAverageUtilization }}
----
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1caeab768d7539ceed1ac6afcd7726243d94edaecaaef8cbe9feed09c16ea9e
+size 696

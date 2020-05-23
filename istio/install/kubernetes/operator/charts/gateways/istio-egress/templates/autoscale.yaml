@@ -1,24 +1,3 @@
-{{ $gateway := index .Values "gateways" "istio-egressgateway" }}
-{{- if and $gateway.autoscaleEnabled $gateway.autoscaleMin $gateway.autoscaleMax }}
-apiVersion: autoscaling/v2beta1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: {{ $gateway.name | default "istio-egressgateway" }}
-  namespace: {{ .Release.Namespace }}
-  labels:
-{{ $gateway.labels | toYaml | indent 4 }}
-    release: {{ .Release.Name }}
-spec:
-  maxReplicas: {{ $gateway.autoscaleMax }}
-  minReplicas: {{ $gateway.autoscaleMin }}
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: {{ $gateway.name | default "istio-egressgateway" }}
-  metrics:
-    - type: Resource
-      resource:
-        name: cpu
-        targetAverageUtilization: {{ $gateway.cpu.targetAverageUtilization }}
----
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed82f24b34822a57dbf1fee4724fc4094c152f92c73d6d80093cced04b3baacc
+size 780

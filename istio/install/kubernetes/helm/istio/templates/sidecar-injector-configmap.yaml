@@ -1,29 +1,3 @@
-{{- if not .Values.global.omitSidecarInjectorConfigMap }}
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: istio-sidecar-injector
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: {{ template "istio.name" . }}
-    chart: {{ template "istio.chart" . }}
-    heritage: {{ .Release.Service }}
-    release: {{ .Release.Name }}
-    istio: sidecar-injector
-data:
-  values: |-
-    {{ .Values | toJson }}
-
-  config: |-
-    policy: {{ .Values.global.proxy.autoInject }}
-    alwaysInjectSelector:
-{{ toYaml .Values.sidecarInjectorWebhook.alwaysInjectSelector | trim | indent 6 }}
-    neverInjectSelector:
-{{ toYaml .Values.sidecarInjectorWebhook.neverInjectSelector | trim | indent 6 }}
-    template: |-
-{{ .Files.Get "files/injection-template.yaml" | trim | indent 6 }}
-    injectedAnnotations:
-    {{- range $key, $val := .Values.sidecarInjectorWebhook.injectedAnnotations }}
-      "{{ $key }}": "{{ $val }}"
-    {{- end }}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf23e2b9da191b2cf928749ed1873147ac7e628c0db1ec6449cc0a334c7243ab
+size 933

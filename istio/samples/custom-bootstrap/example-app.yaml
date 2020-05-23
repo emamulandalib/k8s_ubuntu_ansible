@@ -1,27 +1,3 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: helloworld-v1
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: helloworld
-      version: v1
-  template:
-    metadata:
-      annotations:
-        sidecar.istio.io/bootstrapOverride: "istio-custom-bootstrap-config"
-      labels:
-        app: helloworld
-        version: v1
-    spec:
-      containers:
-        - name: helloworld
-          image: docker.io/istio/examples-helloworld-v1
-          resources:
-            requests:
-              cpu: "100m"
-          imagePullPolicy: IfNotPresent
-          ports:
-            - containerPort: 5000
+version https://git-lfs.github.com/spec/v1
+oid sha256:32143efeee803e0c3478dd35e26325542d0f21b6627203d2371b5b33b4c9eee6
+size 608

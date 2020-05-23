@@ -1,7 +1,3 @@
-# Test Values
-
-These files are intended to be used to install Istio for E2E tests.
-
-The rendered files can be generated with `make generate_e2e_yaml`.
-
-These files will all have `values-e2e.yaml` applied to them *first*, so if there are settings there that should not be included in the test the must be overridden.
+version https://git-lfs.github.com/spec/v1
+oid sha256:073a36b228005f40c0f70f8ce817cf8d974c2c0a189ec84118ba8a14d3d613f6
+size 316

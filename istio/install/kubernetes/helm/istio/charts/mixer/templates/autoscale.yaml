@@ -1,29 +1,3 @@
-{{- range $key, $spec := .Values }}
-{{- if or (eq $key "policy") (eq $key "telemetry") }}
-{{- if and $spec.enabled $spec.autoscaleEnabled $spec.autoscaleMin $spec.autoscaleMax }}
-apiVersion: autoscaling/v2beta1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: istio-{{ $key }}
-  namespace: {{ $.Release.Namespace }}
-  labels:
-    app: {{ template "mixer.name" $ }}
-    chart: {{ template "mixer.chart" $ }}
-    heritage: {{ $.Release.Service }}
-    release: {{ $.Release.Name }}
-spec:
-    maxReplicas: {{ $spec.autoscaleMax }}
-    minReplicas: {{ $spec.autoscaleMin }}
-    scaleTargetRef:
-      apiVersion: apps/v1
-      kind: Deployment
-      name: istio-{{ $key }}
-    metrics:
-    - type: Resource
-      resource:
-        name: cpu
-        targetAverageUtilization: {{ $spec.cpu.targetAverageUtilization }}
----
-{{- end }}
-{{- end }}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:92892bed7169df82c9ec388a4419018b4d9dd5691aa113806e1bd93d1fcb1dc1
+size 846

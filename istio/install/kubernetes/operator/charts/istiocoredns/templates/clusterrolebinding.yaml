@@ -1,15 +1,3 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: istio-istiocoredns-role-binding-{{ .Release.Namespace }}
-  labels:
-    app: istiocoredns
-    release: {{ .Release.Name }}
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: istiocoredns
-subjects:
-- kind: ServiceAccount
-  name: istiocoredns-service-account
-  namespace: {{ .Release.Namespace }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:120c6bb4f795c3720fe5b9272ba521853b2061fe6b6a79d45a0b6bde4206a03e
+size 402

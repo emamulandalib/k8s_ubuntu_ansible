@@ -1,15 +1,3 @@
-{{ $gateway := index .Values "gateways" "istio-ingressgateway" }}
-{{- if or $gateway.sds.enabled .Values.global.istiod.enabled }}
-apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
-metadata:
-  name: istio-ingressgateway-sds
-  namespace: {{ .Release.Namespace }}
-  labels:
-    release: {{ .Release.Name }}
-rules:
-- apiGroups: [""]
-  resources: ["secrets"]
-  verbs: ["get", "watch", "list"]
----
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d89f76870a81bb36fd469ae2d7e1f9fb90b77ff0af81b91651bf47282917a252
+size 405

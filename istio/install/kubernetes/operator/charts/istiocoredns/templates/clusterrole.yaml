@@ -1,11 +1,3 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: istiocoredns
-  labels:
-    app: istiocoredns
-    release: {{ .Release.Name }}
-rules:
-- apiGroups: ["networking.istio.io"]
-  resources: ["*"]
-  verbs: ["get", "watch", "list"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:a589e83fef2ad29e52fcd246e368617e835a8b50904146ed72bc436f0c75208f
+size 252

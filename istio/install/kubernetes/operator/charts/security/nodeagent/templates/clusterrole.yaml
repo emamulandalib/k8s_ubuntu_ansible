@@ -1,11 +1,3 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: istio-nodeagent-{{ .Release.Namespace }}
-  labels:
-    app: istio-nodeagent
-    release: {{ .Release.Name }}
-rules:
-- apiGroups: [""]
-  resources: ["configmaps"]
-  verbs: ["get"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1ff97b7d9333478011a734cc06eb9341bcefc5f448b55c3745c481d29366db2
+size 256

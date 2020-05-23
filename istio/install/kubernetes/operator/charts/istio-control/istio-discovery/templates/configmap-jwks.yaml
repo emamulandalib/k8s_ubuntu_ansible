@@ -1,13 +1,3 @@
-{{ if or (eq .Values.revision "") (not .Values.clusterResources) }}
-{{- if .Values.pilot.jwksResolverExtraRootCA }}
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: pilot-jwks-extra-cacerts{{- if not (eq .Values.revision "") }}-{{ .Values.revision }}{{- end }}
-  namespace: {{ .Release.Namespace }}
-  labels:
-    release: {{ .Release.Name }}
-data:
-  extra.pem: {{ .Values.pilot.jwksResolverExtraRootCA | quote }}
-{{- end }}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b2f57e8faea3b0d2cca2f5c40183b0416631c9520c720bb358b756ea9be0497
+size 435

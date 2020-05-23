@@ -1,10 +1,3 @@
-{
-  "scripts": {
-    "start": "node ratings.js"
-  },
-  "dependencies": {
-    "httpdispatcher": "1.0.0",
-    "mongodb": "^2.2.31",
-    "mysql": "^2.15.0"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d015d6500ca226bacf2e88d42f3d54fa0c2be28dc9c4812fbe5c6f17e36d37e
+size 159

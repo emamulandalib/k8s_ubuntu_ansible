@@ -1,23 +1,3 @@
-{{- range $key, $spec := .Values }}
-{{- if ne $key "enabled" }}
-{{- if $spec.enabled }}
-{{- if $spec.sds }}
-{{- if eq $spec.sds.enabled true }}
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: {{ $key }}-sds
-  namespace: {{ $spec.namespace | default $.Release.Namespace }}
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: Role
-  name: {{ $key }}-sds
-subjects:
-- kind: ServiceAccount
-  name: {{ $key }}-service-account
----
-{{- end }}
-{{- end }}
-{{- end }}
-{{- end }}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2a8a9bff922ec00ad264ac48636947bd9587721bae8b15490be943b984678af
+size 511

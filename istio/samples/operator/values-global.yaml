@@ -1,7 +1,3 @@
-apiVersion: install.istio.io/v1alpha1
-kind: IstioOperator
-spec:
-  values:
-    global:
-      logging:
-        level: "default:warning" # override from info
+version https://git-lfs.github.com/spec/v1
+oid sha256:5551c74cf8860b9ccfdc2169849e3cd85d83ca00b4b3177a4f5154827745534c
+size 155

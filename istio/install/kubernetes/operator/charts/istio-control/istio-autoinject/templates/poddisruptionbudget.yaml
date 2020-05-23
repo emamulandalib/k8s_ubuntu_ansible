@@ -1,18 +1,3 @@
-{{- if .Values.global.defaultPodDisruptionBudget.enabled }}
-apiVersion: policy/v1beta1
-kind: PodDisruptionBudget
-metadata:
-  name: istio-sidecar-injector
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: sidecar-injector
-    release: {{ .Release.Name }}
-    istio: sidecar-injector
-spec:
-  minAvailable: 1
-  selector:
-    matchLabels:
-      app: sidecar-injector
-      release: {{ .Release.Name }}
-      istio: sidecar-injector
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4314ea2463c4755c1fba483b499548ce882f7f6f897cac0c4f2c8bdaa259eb12
+size 446

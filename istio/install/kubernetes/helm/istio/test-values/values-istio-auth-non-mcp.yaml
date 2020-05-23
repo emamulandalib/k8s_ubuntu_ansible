@@ -1,7 +1,3 @@
-global:
-  mtls:
-    enabled: true
-
-  controlPlaneSecurityEnabled: true
-
-  useMCP: false
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc3a13ee7ced116014c3278322fbbcec200c0dc99b90e4e3c058440e158fd1ff
+size 88

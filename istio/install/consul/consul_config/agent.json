@@ -1,8 +1,3 @@
-{
-        "client_addr": "0.0.0.0",
-        "leave_on_terminate": true,
-        "dns_config": {
-                "allow_stale": true,
-                "max_stale": "1s"
-        }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3f4513cd81957b15166cf2d7597141e14282adaa04959c493df160ae0c042560
+size 178

@@ -1,32 +1,3 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: Gateway
-metadata:
-  name: tornado-gateway
-spec:
-  selector:
-    istio: ingressgateway
-  servers:
-  - port:
-      number: 80
-      name: http
-      protocol: HTTP
-    hosts:
-    - "*"
----
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: tornado
-spec:
-  hosts:
-  - "*"
-  gateways:
-  - tornado-gateway
-  http:
-  - match:
-    - uri:
-        prefix: /
-    route:
-    - destination:
-        host: tornado
-      weight: 100
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e0d80e4f67650179a61a4ee38b6efd6dbd1144b5f1decf2e68c34c307d61a46
+size 495

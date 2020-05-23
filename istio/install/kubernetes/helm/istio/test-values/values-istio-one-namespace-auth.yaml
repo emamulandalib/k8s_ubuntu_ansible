@@ -1,17 +1,3 @@
-# This is used to generate istio.yaml used for deprecated CI/CD testing.
-global:
-  # controlPlaneSecurityEnabled enabled. Will result in delays starting the pods while secrets are
-  # propagated, not recommended for tests.
-  controlPlaneSecurityEnabled: true
-  
-  mtls:
-    # Default setting for service-to-service mtls. Can be set explicitly using
-    # destination rules or service annotations.
-    enabled: true
-  
-  ## imagePullSecrets for all ServiceAccount. Must be set for any cluster configured with private docker registry.
-  # imagePullSecrets:
-  #   - name: "private-registry-key"
-
-  # Restrict the applications in one namespace the controller manages
-  oneNamespace: true
+version https://git-lfs.github.com/spec/v1
+oid sha256:8969aac3969f29349527f2cf235235f593236eda14cc7af9eeb35d9f407c6d11
+size 684

@@ -1,15 +1,3 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: linkerd-web
-spec:
-  template:
-    spec:
-      containers:
-      - name: web
-        args:
-        - -api-addr=linkerd-controller-api.linkerd.svc.cluster.local:8085
-        - -grafana-addr=linkerd-grafana.linkerd.svc.cluster.local:3000
-        - -controller-namespace=linkerd
-        - -log-level=info
-        - -enforced-host= 
+version https://git-lfs.github.com/spec/v1
+oid sha256:b4b9929f82f9c21d3958b1a55b15ee69100b6660f2df7aa6778651c8c9e42d6c
+size 383

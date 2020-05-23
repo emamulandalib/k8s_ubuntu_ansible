@@ -1,15 +1,3 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: istio-nodeagent-{{ .Release.Namespace }}
-  labels:
-    app: istio-nodeagent
-    release: {{ .Release.Name }}
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: istio-nodeagent-{{ .Release.Namespace }}
-subjects:
-  - kind: ServiceAccount
-    name: istio-nodeagent-service-account
-    namespace: {{ .Release.Namespace }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e4134886e2e1684a9d742c91a7d0508f6ce1c6cf4039624fc7c46aff295b6394
+size 426

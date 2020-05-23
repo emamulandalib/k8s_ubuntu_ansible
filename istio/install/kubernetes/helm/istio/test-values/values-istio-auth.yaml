@@ -1,14 +1,3 @@
-# This is used to generate istio-auth.yaml for automated CI/CD test, using v1/alpha1
-# or v2/alpha3 with 'gradual migration' (using env variable at inject time).
-global:
-  # controlPlaneSecurityEnabled enabled. Will result in delays starting the pods while secrets are
-  # propagated, not recommended for tests.
-  controlPlaneSecurityEnabled: true
-  
-  mtls:
-    # Default setting for service-to-service mtls. Can be set explicitly using
-    # destination rules or service annotations.
-    enabled: true
-  ## imagePullSecrets for all ServiceAccount. Must be set for any cluster configured with private docker registry.
-  # imagePullSecrets:
-  #   - name: "private-registry-key"
+version https://git-lfs.github.com/spec/v1
+oid sha256:ad0a2babef771105b3761570857eff800fc34f04b19814ada8ff240eca15e962
+size 678

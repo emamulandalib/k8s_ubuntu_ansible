@@ -1,13 +1,3 @@
-apiVersion: v1
-name: istio-cni
-version: 1.5.2
-appVersion: 1.5.2
-tillerVersion: ">=2.7.2"
-description: Helm chart for istio-cni components
-keywords:
-  - istio-cni
-  - istio
-sources:
-  - http://github.com/istio/cni
-engine: gotpl
-icon: https://istio.io/favicons/android-192x192.png
+version https://git-lfs.github.com/spec/v1
+oid sha256:9f4c614c55f65cbd1db3ee22f77ef8809ff515c523e4969ddfe40040620bee3e
+size 279

@@ -1,19 +1,3 @@
-{{- if or (.Values.policy.enabled) (.Values.telemetry.enabled) }}
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: istio-mixer-admin-role-binding-{{ .Release.Namespace }}
-  labels:
-    app: {{ template "mixer.name" . }}
-    chart: {{ template "mixer.chart" . }}
-    heritage: {{ .Release.Service }}
-    release: {{ .Release.Name }}
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: istio-mixer-{{ .Release.Namespace }}
-subjects:
-  - kind: ServiceAccount
-    name: istio-mixer-service-account
-    namespace: {{ .Release.Namespace }}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba36b269f6d688c06ec1a53744b2a99c949641ecfc53eb7e4de0d734a12118ea
+size 603

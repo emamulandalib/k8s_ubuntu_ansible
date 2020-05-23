@@ -1,11 +1,3 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: Sidecar
-metadata:
-  name: default
-  namespace: {{ .Release.Namespace }}
-  labels:
-    release: {{ .Release.Name }}
-spec:
-  egress:
-    - hosts:
-        - "*/*"
+version https://git-lfs.github.com/spec/v1
+oid sha256:8faadf546c1a70eba13076180044ca4f47353b903ff881f6819c54a72e42c873
+size 207

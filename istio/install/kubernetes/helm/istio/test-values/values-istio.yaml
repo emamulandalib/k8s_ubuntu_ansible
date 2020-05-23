@@ -1,7 +1,3 @@
-
-# This is used to generate istio.yaml for automated CI/CD test, using v1/alpha1
-# or v2/alpha3 with 'gradual migration' (using env variable at inject time).
-# global:
-  ## imagePullSecrets for all ServiceAccount. Must be set for any clustser configured with private docker registry.
-  # imagePullSecrets:
-  #   - name: "private-registry-key"
+version https://git-lfs.github.com/spec/v1
+oid sha256:73a3eb3b3fde0d0feec7d841f22226d90fcb3f9022e52b884b3412c7c36269c2
+size 343

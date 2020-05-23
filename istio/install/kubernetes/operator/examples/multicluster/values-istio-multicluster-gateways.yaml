@@ -1,34 +1,3 @@
-apiVersion: install.istio.io/v1alpha1
-kind: IstioOperator
-spec:
-  addonComponents:
-    istiocoredns:
-      enabled: true
-
-  components:
-    egressGateways:
-      - name: istio-egressgateway
-        enabled: true
-
-  values:
-    global:
-      # Provides dns resolution for global services
-      podDNSSearchNamespaces:
-        - global
-        - "{{ valueOrDefault .DeploymentMeta.Namespace \"default\" }}.global"
-
-      multiCluster:
-        enabled: true
-
-      controlPlaneSecurityEnabled: true
-
-    # Multicluster with gateways requires a root CA
-    # Cluster local CAs are bootstrapped with the root CA.
-    security:
-      selfSigned: false
-
-    gateways:
-      istio-egressgateway:
-        env:
-          # Needed to route traffic via egress gateway if desired.
-          ISTIO_META_REQUESTED_NETWORK_VIEW: "external"
+version https://git-lfs.github.com/spec/v1
+oid sha256:b27af0e48c13161f5ca7d08cef5b40b5110d67fbde6eb3bb27c69dfc6c2bd16c
+size 824

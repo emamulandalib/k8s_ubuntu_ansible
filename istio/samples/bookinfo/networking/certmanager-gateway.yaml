@@ -1,35 +1,3 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: Gateway
-metadata:
-  name: cert-manager-gateway
-  namespace: istio-system
-spec:
-  selector:
-    istio: ingressgateway
-  servers:
-  - port:
-      number: 80
-      name: http
-      protocol: HTTP
-    hosts:
-    - "*"
----
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: cert-manager
-  namespace: istio-system
-spec:
-  hosts:
-  - "*"
-  gateways:
-  - cert-manager-gateway
-  http:
-  - match:
-    - uri:
-        prefix: /.well-known/acme-challenge/
-    route:
-    - destination:
-        host: cert-manager-resolver
-        port:
-          number: 8089
+version https://git-lfs.github.com/spec/v1
+oid sha256:20da12d47476c3476c06454df5ec0b21d49f3cf4bf7d5c3e145b6296b20b3a6d
+size 622

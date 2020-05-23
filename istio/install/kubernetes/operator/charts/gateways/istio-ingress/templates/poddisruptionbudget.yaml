@@ -1,17 +1,3 @@
-{{- if .Values.global.defaultPodDisruptionBudget.enabled }}
-{{ $gateway := index .Values "gateways" "istio-ingressgateway" }}
-apiVersion: policy/v1beta1
-kind: PodDisruptionBudget
-metadata:
-  name: ingressgateway
-  namespace: {{ .Release.Namespace }}
-  labels:
-{{ $gateway.labels | toYaml | indent 4 }}
-    release: {{ .Release.Name }}
-spec:
-  minAvailable: 1
-  selector:
-    matchLabels:
-{{ $gateway.labels | toYaml | indent 6 }}
-      release: {{ .Release.Name }}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:69efeb183f548f5a65a01fefd36a84b459ec02631fc1e3d9b495dc716315d79c
+size 476

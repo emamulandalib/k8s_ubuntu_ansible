@@ -1,6 +1,3 @@
-# Install Istio on an existing Kubernetes cluster
-
-Please follow the installation instructions on [istio.io](https://istio.io/docs/setup/kubernetes/).
-
-If you want to install Istio using the istio/istio repository instead of downloading a release,
-refer to the [developer wiki](https://github.com/istio/istio/wiki) for instructions.
+version https://git-lfs.github.com/spec/v1
+oid sha256:0091bcdf9fdfb341b456084cbace16bd1394bb3cceb26d0cf3e7d4e2ec028bea
+size 333

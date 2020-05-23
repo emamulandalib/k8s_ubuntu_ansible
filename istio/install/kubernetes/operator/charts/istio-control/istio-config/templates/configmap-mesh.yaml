@@ -1,11 +1,3 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: istio-mesh-galley
-  namespace: {{ .Release.Namespace }}
-  labels:
-    release: {{ .Release.Name }}
-data:
-  mesh: |-
-{{ toYaml .Values.galley.mesh | indent 4 }}
----
+version https://git-lfs.github.com/spec/v1
+oid sha256:e887d0d5879b85fec62dffa5413a4711ba1b5aaafc754dd1171f31c3842550d5
+size 213

@@ -1,6 +1,3 @@
-certmanager has been deployed successfully!
-
-More information on the different types of issuers and how to configure them
-can be found in our documentation:
-
-https://cert-manager.readthedocs.io/en/latest/reference/issuers.html
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef45f00d3cbfd3b0690ac2c707af10f96cabb7a1facfdd28ab0b56125b3b58f8
+size 226

@@ -1,7 +1,3 @@
-# Installation using Helm
-
-Please follow the installation instructions from [istio.io](https://istio.io/docs/setup/kubernetes/install/helm/).
-
-## Development
-
-Future development for the installer is taking place on [istio/installer](https://github.com/istio/installer). Please add new features to that repository, as only bug fixes will be allowed here.
+version https://git-lfs.github.com/spec/v1
+oid sha256:36981675dbb8eb1cecbc55ed2300ddb90299754bb80d83875882e8771a944aae
+size 353

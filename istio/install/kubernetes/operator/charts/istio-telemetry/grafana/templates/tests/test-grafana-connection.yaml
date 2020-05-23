@@ -1,28 +1,3 @@
-{{- if .Values.global.enableHelmTest }}
-apiVersion: v1
-kind: Pod
-metadata:
-  name: grafana-test
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: grafana-test
-    release: {{ .Release.Name }}
-    istio: grafana
-  annotations:
-    sidecar.istio.io/inject: "false"
-    helm.sh/hook: test-success
-spec:
-{{- if .Values.global.priorityClassName }}
-  priorityClassName: "{{ .Values.global.priorityClassName }}"
-{{- end }}
-  containers:
-    - name: "grafana-test"
-      image: {{ .Values.global.hub }}/{{ .Values.global.proxy.image }}:{{ .Values.global.tag }}
-      imagePullPolicy: "{{ .Values.global.imagePullPolicy }}"
-      command: ['curl']
-      args: ['http://grafana:{{ .Values.grafana.service.externalPort }}']
-  restartPolicy: Never
-  affinity:
-    {{- include "nodeaffinity" . | indent 4 }}
-    {{- include "podAntiAffinity" . | indent 4 }}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:038b5d6a98f66afe5cc21d9005df65820cda659555ff1811d4c670c934a7cce4
+size 863

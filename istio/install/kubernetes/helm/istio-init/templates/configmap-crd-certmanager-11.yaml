@@ -1,10 +1,3 @@
-{{- if .Values.certmanager.enabled }}
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  namespace: {{ .Release.Namespace }}
-  name: istio-crd-certmanager-11
-data:
-  crd-certmanager-11.yaml: |-
-{{.Files.Get "files/crd-certmanager-11.yaml" | printf "%s" | indent 4}}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0908a9131df1ac609c495cecb904ee4e68c645ef5fd568816cebb4ba7328ef52
+size 269

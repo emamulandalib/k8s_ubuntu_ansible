@@ -1,16 +1,3 @@
-{{- $files := .Files }}
-{{- range $path, $bytes := .Files.Glob "dashboards/*.json" }}
-{{- $filename := trimSuffix (ext $path) (base $path) }}
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: istio-grafana-configuration-dashboards-{{ $filename }}
-  namespace: {{ $.Release.Namespace }}
-  labels:
-    app: grafana
-    release: {{ $.Release.Name }}
-    istio: grafana
-data:
-  {{ base $path }}: '{{ $files.Get $path }}'
----
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:66c8ed7f000ba5231c989e467a14d3dc0d1ae16b9a6266d9f637d53190b575d9
+size 431

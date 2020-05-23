@@ -1,12 +1,3 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: reviews
-spec:
-  hosts:
-    - reviews.service.consul
-  http:
-  - route:
-    - destination:
-        host: reviews.service.consul
-        subset: v3
+version https://git-lfs.github.com/spec/v1
+oid sha256:6bbd3128c49efe5906d62640144f65f26ae65cdfb25367deccdb5bf57a12c3ac
+size 226

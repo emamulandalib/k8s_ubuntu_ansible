@@ -1,20 +1,3 @@
-{{- if .Values.global.defaultPodDisruptionBudget.enabled }}
-apiVersion: policy/v1beta1
-kind: PodDisruptionBudget
-metadata:
-  name: istio-galley
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: galley
-    release: {{ .Release.Name }}
-    istio: galley
-spec:
-  minAvailable: 1
-  selector:
-    matchLabels:
-      app: galley
-      release: {{ .Release.Name }}
-      istio: galley
----
-
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8938a74984a5a1034d2dc560d2247a58087eb65f333ac616a84d681c8b7a589c
+size 401

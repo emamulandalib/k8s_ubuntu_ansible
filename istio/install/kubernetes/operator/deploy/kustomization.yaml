@@ -1,13 +1,3 @@
----
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-namespace: istio-operator
-resources:
-- crds/istio_v1alpha1_istiooperator_crd.yaml
-- namespace.yaml
-- clusterrole.yaml
-- clusterrole_binding.yaml
-- service_account.yaml
-- operator.yaml
-- service.yaml
-...
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea428de37bf3c5f0b09a0c67f7cfb78e8682a4e06a8230f83def1cf99342fdac
+size 271

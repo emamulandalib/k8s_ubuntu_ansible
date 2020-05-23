@@ -1,24 +1,3 @@
-apiVersion: "config.istio.io/v1alpha2"
-kind: denier
-metadata:
-  name: denyreviewsv3handler
-spec:
-  status:
-    code: 7
-    message: Not allowed
----
-apiVersion: "config.istio.io/v1alpha2"
-kind: checknothing
-metadata:
-  name: denyreviewsv3request
-spec:
----
-apiVersion: "config.istio.io/v1alpha2"
-kind: rule
-metadata:
-  name: denyreviewsv3
-spec:
-  match: destination.labels["app"] == "ratings" && source.labels["app"]=="reviews" && source.labels["version"] == "v3"
-  actions:
-  - handler: denyreviewsv3handler.denier
-    instances: [ denyreviewsv3request.checknothing ]
+version https://git-lfs.github.com/spec/v1
+oid sha256:f015165b1820ebee03fa9c4468a0d38e82ff36244d55976fdf1cb931f8457698
+size 567

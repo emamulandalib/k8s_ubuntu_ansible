@@ -1,15 +1,3 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: istio-init-admin-role-binding-{{ .Release.Namespace }}
-  labels:
-    app: istio-init
-    istio: init
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: istio-init-{{ .Release.Namespace }}
-subjects:
-  - kind: ServiceAccount
-    name: istio-init-service-account
-    namespace: {{ .Release.Namespace }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:48084fe60347bd17f752d4fd49a931868a577f87da5c46ca7ca4f07540ab4e48
+size 408

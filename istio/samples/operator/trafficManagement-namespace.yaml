@@ -1,6 +1,3 @@
-apiVersion: install.istio.io/v1alpha1
-kind: IstioOperator
-spec:
-  trafficManagement:
-    components:
-      namespace: istio-control-custom
+version https://git-lfs.github.com/spec/v1
+oid sha256:15b662bebe13fcdd2ddbec5a6117ada129291be43dcd325a86d74558b55e03dd
+size 139

@@ -1,30 +1,3 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: Gateway
-metadata:
-  name: httpbin-gateway
-spec:
-  selector:
-    istio: ingressgateway
-  servers:
-  - port:
-      number: 80
-      name: http
-      protocol: HTTP
-    hosts:
-    - "*"
----
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: httpbin
-spec:
-  hosts:
-  - "*"
-  gateways:
-  - httpbin-gateway
-  http:
-  - route:
-    - destination:
-        host: httpbin
-        port:
-          number: 8000
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ea70754f5fbc4859ba886d82a68cdc265ea6af3ac4f7427e3bc5242a5617846
+size 474

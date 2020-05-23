@@ -1,16 +1,3 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: istio-galley-configuration
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: {{ template "galley.name" . }}
-    chart: {{ template "galley.chart" . }}
-    heritage: {{ .Release.Service }}
-    release: {{ .Release.Name }}
-    istio: galley
-data:
-{{- if .Values.global.configValidation }}
-  validatingwebhookconfiguration.yaml: |-
-    {{- include "validatingwebhookconfiguration.yaml.tpl" . | indent 4}}
-{{- end}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0cc0a868855b985dae4b65df3276e032b5622ee731d777af6b0dcb3f84fc537
+size 468

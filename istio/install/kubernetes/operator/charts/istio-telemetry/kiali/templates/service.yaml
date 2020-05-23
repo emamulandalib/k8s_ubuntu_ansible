@@ -1,20 +1,3 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: kiali
-  namespace: {{ .Release.Namespace }}
-  annotations:
-    {{- range $key, $val := .Values.kiali.service.annotations }}
-      {{ $key }}: {{ $val | quote }}
-    {{- end }}
-  labels:
-    app: kiali
-    release: {{ .Release.Name }}
-spec:
-  type: {{ .Values.kiali.service.type }}
-  ports:
-    - name: http-kiali
-      protocol: TCP
-      port: 20001
-  selector:
-    app: kiali
+version https://git-lfs.github.com/spec/v1
+oid sha256:80f05a04fe14528699133014a512b07463107fc85a88f8fa3c5042c9584492d8
+size 425

@@ -1,1 +1,3 @@
-requests-mock==1.5.2
+version https://git-lfs.github.com/spec/v1
+oid sha256:c9cbdedf79c5cf9a8e4a9f40296abade47d47a458469202201d2c8476ef797ab
+size 21

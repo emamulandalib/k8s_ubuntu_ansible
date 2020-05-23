@@ -1,7 +1,3 @@
-global:
-  certificates:
-    - dnsNames: [istio-pilot.istio-system.svc, istio-pilot.istio-system]
-    - secretName: dns.istio-galley-service-account
-      dnsNames: [istio-galley.istio-system.svc, istio-galley.istio-system]
-    - secretName: dns.istio-sidecar-injector-service-account
-      dnsNames: [istio-sidecar-injector.istio-system.svc, istio-sidecar-injector.istio-system]
+version https://git-lfs.github.com/spec/v1
+oid sha256:8fad0b061b4f7aa8c0f5d2a3de6cd47cdc6d387588e8e37e181b4cb4d77b3c63
+size 379

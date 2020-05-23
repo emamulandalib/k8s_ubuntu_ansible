@@ -1,21 +1,3 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: istio-mixer-{{ .Release.Namespace }}
-  labels:
-    app: istio-telemetry
-    release: {{ .Release.Name }}
-rules:
-- apiGroups: ["config.istio.io"] # istio CRD watcher
-  resources: ["*"]
-  verbs: ["create", "get", "list", "watch", "patch"]
-- apiGroups: ["apiextensions.k8s.io"]
-  resources: ["customresourcedefinitions"]
-  verbs: ["get", "list", "watch"]
-- apiGroups: [""]
-  resources: ["configmaps", "endpoints", "pods", "services", "namespaces", "secrets", "replicationcontrollers"]
-  verbs: ["get", "list", "watch"]
-- apiGroups: ["extensions", "apps"]
-  resources: ["replicasets"]
-  verbs: ["get", "list", "watch"]
----
+version https://git-lfs.github.com/spec/v1
+oid sha256:e0ed818877b8b2cb7a2084398c9a8be96fb310743a4fc07afc1657cd4f9d89f7
+size 696

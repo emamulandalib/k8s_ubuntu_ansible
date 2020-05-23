@@ -1,24 +1,3 @@
-{{ if .Values.clusterResources }}
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: istio-citadel-{{ .Release.Namespace }}
-  labels:
-    app: citadel
-    release: {{ .Release.Name }}
-rules:
-- apiGroups: [""]
-  resources: ["configmaps"]
-  verbs: ["create", "get", "update"]
-- apiGroups: [""]
-  resources: ["secrets"]
-  verbs: ["create", "get", "watch", "list", "update", "delete"]
-- apiGroups: [""]
-  resources: ["serviceaccounts", "services", "namespaces"]
-  verbs: ["get", "watch", "list"]
-- apiGroups: ["authentication.k8s.io"]
-  resources: ["tokenreviews"]
-  verbs: ["create"]
-
----
-{{ end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f8b24fb3789a674c94b479fac5c45425f5fd046801b32a2fba116147b7e7d2e
+size 622

@@ -1,24 +1,3 @@
-global:
-  controlPlaneSecurityEnabled: true
-
-  mtls:
-    # Default setting for service-to-service mtls. Can be set explicitly using
-    # destination rules or service annotations.
-    enabled: true
-
-  sds:
-    enabled: true
-    udsPath: "unix:/var/run/sds/uds_path"
-    token:
-      aud: "istio-ca"
-
-  proxy:
-    enableCoreDump: true
-
-nodeagent:
-  enabled: true
-  image: node-agent-k8s
-  env:
-    CA_PROVIDER: "Citadel"
-    CA_ADDR: "istio-citadel:8060"
-    VALID_TOKEN: true
+version https://git-lfs.github.com/spec/v1
+oid sha256:f846d29220c967950edd1c9c215bf812537a9e30be4e15f620eddcae9d0a38f7
+size 476

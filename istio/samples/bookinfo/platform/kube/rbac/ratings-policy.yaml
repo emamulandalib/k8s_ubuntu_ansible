@@ -1,21 +1,3 @@
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRole
-metadata:
-  name: ratings-viewer
-  namespace: default
-spec:
-  rules:
-  - services: ["ratings.default.svc.cluster.local"]
-    methods: ["GET"]
----
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRoleBinding
-metadata:
-  name: bind-ratings
-  namespace: default
-spec:
-  subjects:
-  - user: "cluster.local/ns/default/sa/bookinfo-reviews"
-  roleRef:
-    kind: ServiceRole
-    name: "ratings-viewer"
+version https://git-lfs.github.com/spec/v1
+oid sha256:6322785aa4f0d405cd68e35287a00f3347196a9d7700da3403b49c967b049803
+size 450

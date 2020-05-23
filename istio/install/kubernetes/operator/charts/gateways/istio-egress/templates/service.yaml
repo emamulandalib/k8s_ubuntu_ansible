@@ -1,25 +1,3 @@
-{{ $gateway := index .Values "gateways" "istio-egressgateway" }}
-apiVersion: v1
-kind: Service
-metadata:
-  name: {{ $gateway.name | default "istio-egressgateway" }}
-  namespace: {{ .Release.Namespace }}
-  annotations:
-    {{- range $key, $val := $gateway.serviceAnnotations }}
-    {{ $key }}: {{ $val | quote }}
-    {{- end }}
-  labels:
-{{ $gateway.labels | toYaml | indent 4 }}
-    release: {{ .Release.Name }}
-spec:
-  type: ClusterIP
-  selector:
-{{ $gateway.labels | toYaml | indent 4 }}
-  ports:
-    {{- range $key, $val := $gateway.ports }}
-    -
-      {{- range $pkey, $pval := $val }}
-      {{ $pkey}}: {{ $pval }}
-      {{- end }}
-    {{- end }}
----
+version https://git-lfs.github.com/spec/v1
+oid sha256:37bdfcdf23a44b5aa8b7fe8ae88a946178433da019cc0c14324efc6e88d640b2
+size 656

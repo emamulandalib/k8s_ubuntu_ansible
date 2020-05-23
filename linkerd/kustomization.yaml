@@ -1,4 +1,3 @@
-resources:
-- linkerd.yaml
-patchesStrategicMerge:
-- dashboard.yaml
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e801fb7f12ea9c845cd02d2034c23f39abc775bd25252ac9a694297c4d03bbf
+size 66

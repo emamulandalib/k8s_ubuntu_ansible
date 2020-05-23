@@ -1,7 +1,3 @@
-requests
-flask
-flask_json
-flask_bootstrap
-json2html
-simplejson
-gevent
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c303d128c4192111011c3673054b6d1492241d05dba5af0035d29e2b6aba4dc
+size 70

@@ -1,4 +1,3 @@
-apiVersion: install.istio.io/v1alpha1
-kind: IstioOperator
-spec:
-  profile: sds
+version https://git-lfs.github.com/spec/v1
+oid sha256:ae0a827fb134ea4f32fe1adc59121e82b47c7bc6de338b5cbaf3d176e024a388
+size 79

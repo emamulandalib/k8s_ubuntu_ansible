@@ -1,16 +1,3 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: istio-sidecar-injector-admin-role-binding-{{ .Release.Namespace }}
-  labels:
-    app: sidecar-injector
-    release: {{ .Release.Name }}
-    istio: sidecar-injector
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: istio-sidecar-injector-{{ .Release.Namespace }}
-subjects:
-  - kind: ServiceAccount
-    name: istio-sidecar-injector-service-account
-    namespace: {{ .Release.Namespace }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:656d199a5bbc6cec36eb21928f05094d6a5da40bf83942643e35b0750ab99a82
+size 495

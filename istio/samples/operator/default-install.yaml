@@ -1,8 +1,3 @@
-apiVersion: install.istio.io/v1alpha1
-kind: IstioOperator
-metadata:
-  namespace: istio-system
-  name: istio-operator
-spec:
-  profile: default
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:3bb28ce8879f5282d63615e10ad3311c3ecb20eb8e68128a5ee2de17ff735699
+size 143

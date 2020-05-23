@@ -1,5 +1,3 @@
-# Example Values
-
-These files provide various example values for different Istio setups.
-
-To use them, [read the docs](https://istio.io/docs/setup/kubernetes/helm-install/) and add the flag `--values example-file.yaml`.
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d8002dc489c8f4740ad6ef4fe354c5ca6b98e3e923541e9aa067212657d2f7f
+size 220

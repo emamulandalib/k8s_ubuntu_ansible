@@ -1,22 +1,3 @@
-apiVersion: install.istio.io/v1alpha1
-kind: IstioOperator
-spec:
-  trafficManagement:
-    components:
-      pilot:
-        k8s:
-          resources:
-            requests:
-              cpu: 1000m # override from default 500m
-              memory: 4096Mi # ... default 2048Mi
-          hpaSpec:
-            maxReplicas: 10 # ... default 5
-            minReplicas: 2  # ... default 1
-          nodeSelector:
-            master: "true"
-          tolerations:
-          - key: dedicated
-            operator: Exists
-            effect: NoSchedule
-          - key: CriticalAddonsOnly
-            operator: Exists
+version https://git-lfs.github.com/spec/v1
+oid sha256:8534992c4e56ea67fd8f170f3b468a5af10cf8beefb8f04f7fd6318dd284dd9c
+size 607

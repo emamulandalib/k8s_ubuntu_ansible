@@ -1,14 +1,3 @@
-{{- if .Values.jwksResolverExtraRootCA }}
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: istio-jwks-extra-cacerts
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: {{ template "pilot.name" . }}
-    chart: {{ template "pilot.chart" . }}
-    heritage: {{ .Release.Service }}
-    release: {{ .Release.Name }}
-data:
-  extra.pem: {{ .Values.jwksResolverExtraRootCA | quote }}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef2d8882b5d198e069b7cdd48a91f322b2648d694fe07c19b179a01f7b005746
+size 391

@@ -1,34 +1,3 @@
-apiVersion: install.istio.io/v1alpha1
-kind: IstioOperator
-spec:
-  values:
-    security:
-      selfSigned: false
-    gateways:
-      istio-ingressgateway:
-        env:
-          ISTIO_META_NETWORK: "network1"
-    global:
-      mtls:
-        enabled: true
-      controlPlaneSecurityEnabled: true
-      proxy:
-        accessLogFile: "/dev/stdout"
-      network: network1
-      meshExpansion:
-        enabled: true
-    pilot:
-      meshNetworks:
-        networks:
-          network1:
-            endpoints:
-            - fromRegistry: Kubernetes
-            gateways:
-            - address: 0.0.0.0
-              port: 443
-          network2:
-            endpoints:
-            - fromRegistry: n2-k8s-config
-            gateways:
-            - address: 0.0.0.0
-              port: 443
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3dde9688230dbb22252e4a16d084559370016eb9512596769dd3453167faf08
+size 781

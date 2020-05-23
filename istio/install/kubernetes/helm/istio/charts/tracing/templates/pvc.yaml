@@ -1,21 +1,3 @@
-{{- if eq .Values.provider "jaeger" }}
-{{- if .Values.jaeger.persist }}
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: istio-jaeger-pvc
-  namespace: {{ .Release.Namespace }}
-  labels:
-    app: jaeger
-    chart: {{ template "tracing.chart" . }}
-    heritage: {{ .Release.Service }}
-    release: {{ .Release.Name }}
-spec:
-  storageClassName: {{ .Values.jaeger.storageClassName }}
-  accessModes:
-    - {{ .Values.jaeger.accessMode }}
-  resources:
-    requests:
-      storage: 5Gi
-{{- end }}
-{{- end }}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e057ef91543773c61999bc90f2cada96b760a37679847d42b13557e7e5c2103a
+size 513

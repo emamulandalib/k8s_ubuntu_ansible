@@ -1,4 +1,3 @@
-# Install Istio with Consul in a simple Docker Compose setup
-
-The install file `istio.yaml` deploys Istio Pilot, Consul, Registrator, and
-the Istio API server with etcd as Docker containers.
+version https://git-lfs.github.com/spec/v1
+oid sha256:dce7e1de087551301f1b9feb851b5c16e132a01c26be4471f73823e76589d9bd
+size 191
